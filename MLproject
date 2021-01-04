@@ -8,5 +8,5 @@ conda_env: conda.yml
 entry_points:
   train:
     parameters:
-      data_file: path
+      data_file: string
     command: "python train.py --data_file {data_file}"
