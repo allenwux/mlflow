@@ -28,7 +28,7 @@ pickle.dump(log_reg, open(model_file, 'wb'))
 
 output_file = os.path.join(model_path, "output.json")
 
-with open(model_file, 'w+') as file:
+with open(output_file, 'w+') as file:
     json.dump({"message": "Hello World!"}, file)
 
 with mlflow.start_run():
