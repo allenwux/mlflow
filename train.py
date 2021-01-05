@@ -26,11 +26,16 @@ if not os.path.exists(model_path):
 model_file = os.path.join(model_path, "model.pkl")
 pickle.dump(log_reg, open(model_file, 'wb'))
 
+output_file = os.path.join(model_path, "output.json")
+
+with open(model_file, 'w+') as file:
+    json.dump({"message": "Hello World!"}, file)
+
 with mlflow.start_run():
     active_run = mlflow.active_run()
 
     if active_run:
         print (active_run.info.run_id)
-        mlflow.log_artifact(model_file, artifact_path='output')
+        mlflow.log_artifact(model_path, artifact_path='output')
     else:
         print ("can not find the active run")
