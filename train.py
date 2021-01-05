@@ -36,6 +36,7 @@ with mlflow.start_run():
 
     if active_run:
         print (active_run.info.run_id)
-        mlflow.log_artifact(model_path, artifact_path='output')
+        mlflow.log_artifact(model_file, artifact_path='output')
+        mlflow.log_artifact(output_file, artifact_path='output/output.json')
     else:
         print ("can not find the active run")
