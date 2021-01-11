@@ -8,5 +8,7 @@ dependencies:
 - pip:
   - mlflow
   - sklearn
+  - pandas
+  - azureml-mlflow
 channels:
 - conda-forge
