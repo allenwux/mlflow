@@ -10,3 +10,7 @@ entry_points:
     parameters:
       data_file: string
     command: "python train.py --data_file {data_file}"
+  batchinference:
+    parameters:
+      data_file: string
+    command: "python train.py --data_file {data_file}"
