@@ -2,14 +2,15 @@ name: mlflowtest
 dependencies:
   # The python interpreter version.
   # Currently Azure ML only supports 3.5.2 and later.
-- python=3.6.2
-- pip
-- numpy>=1.14.3
-- pandas>=1.0.0
-- scikit-learn=0.19.1
-
-- pip:
-  - mlflow
-  - azureml-mlflow
+  - python=3.6.2
+  - pip
+  - fsspec
+  - numpy>=1.14.3
+  - pandas>=1.0.0
+  - scikit-learn=0.19.1
+  - pip:
+    - mlflow
+    - azureml-mlflow
+    - luna-publish-utils
 channels:
-- conda-forge
+  - conda-forge
